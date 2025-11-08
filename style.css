@@ -11,6 +11,19 @@ html{
     font-size: 62.5%;
 }
 
+.first-menu {
+    width: 4rem;
+    height: 4rem;
+    background-color: #aecdd5;
+    position: fixed;
+    top:10rem;
+    right: 10rem;
+    z-index: 200;
+    cursor: pointer;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
 .header {
     width: 100%;
     height: 100vh;
@@ -21,6 +34,8 @@ html{
     width: 100%;
     height: 100%;
     background-color: #645454;
+    position: relative;
+
 }
 
 .img-wrapper img {
@@ -28,22 +43,56 @@ width: 100%;
 height: 100%;
 object-fit: cover;
 opacity: 0.7;
+display: block;
+z-index: 1;
 }
 
 .banner {
     position: absolute;
-    left: 18%;
-    right: 30%;
-}
-
-.banner p{
-    font-family: Josefin Slab, serif;
+    left: 25%;
+    right: 16%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    color: blanchedalmond;
+    padding: 3rem;
+    max-width: 60%;
+    text-align: left;
+    text-shadow: 0 4px 10px rgba(0,0,0,.6);    
 }
 
 .banner h1 {
     font-family: "Baloo Da 2", serif;
-    font-size: 10rem;
-    font-weight: 300;
-    color: blanchedalmond;
-    width: 40%;
+    font-size: 5rem;
+    font-weight: 400;
+    color: antiquewhite;
+    width: 45%;
+    line-height: 1.2rem;
+    letter-spacing: .2rem;
+    margin-bottom: 2rem;
+    text-shadow: #a85d5d;
+}
+
+.banner p {
+    font-family: "Josefin Slab", serif;
+    font-size: 2rem;
+    line-height: 1.2;
+    width: 55%;
+    letter-spacing: .1rem;
+    margin-bottom: 3rem;
+    text-shadow: #645454;
+}
+
+.banner button {
+    width: 25rem;
+    height: 5rem;
+    background-color: #a3a327;
+    border: none;
+    font-family: "Muli", serif;
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    text-shadow: #a85d5d;
+    box-shadow: #a3a327;
+    cursor: pointer;
 }
