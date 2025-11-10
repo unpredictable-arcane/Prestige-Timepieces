@@ -23,6 +23,11 @@ html{
     justify-content: space-between;
     display: flex;
     flex-direction: column;
+    transition: right .8s;
+}
+
+.change .hamburger-menu {
+    right: 33rem;
 }
 
 .line {
@@ -30,6 +35,58 @@ html{
     height: 0.2rem;
     background-color: azure;
     box-shadow: 0 0.1rem 0.2rem #aecdd5;
+}
+
+.change.line {
+    background-color: #c15f5f;
+}
+
+.change.line-1 {
+    transform: rotate(45deg) translate(.3rem, .8rem);
+}
+
+.change.line-2 {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.change.line-3 {
+    transform: rotate(-45deg) translate(.4rem, -.7rem);
+}
+
+.first-menu span {
+    position: absolute;
+    left: 5rem;
+    height: 5rem;
+    width: 8rem;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    color: antiquewhite;
+    align-items: center;
+    font-family: "Baloo Da 2", serif;
+    font-size: 1.5rem;
+    letter-spacing: .1rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+}
+
+.change .first-menu:hover span {
+    opacity: 1;
+    visibility: visible;
+}
+
+.first-menu span::before {
+    content: "";
+    position: absolute;
+    border-left: 1rem solid transparent;
+    border-bottom: 1rem solid transparent;
+    border-right: 1rem solid #d591d5;
+    border-top: 2rem solid transparent;
+    top: 40%;
+    left: -3rem;
+    transform: translateY(-45%);
 }
 
 .header {
@@ -133,4 +190,77 @@ animation:scale 23s;
     transform: translateY(0) rotateY(0);
     opacity: 1;
  }
+}
+
+.sidebar {
+    background-color: #fff;
+    height: 100vh;
+    width: 50rem;
+    top: 0;
+    right: -40rem;
+    position: fixed;
+    transition: right .4s;
+}
+
+.change .sidebar {
+    right: 0;
+}
+
+.menu {
+    top: 40%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.menu-item {
+    text-align: center;
+}
+
+.menu-link {
+    color: rgb(113, 109, 103);
+    font-size: 5rem;
+    font-family: "Baloo Da 2", serif;
+    position: relative;
+}
+
+.menu-link::before {
+    content: attr(data-content);
+    top: 0;
+    left: 0;
+    position: absolute;
+    color: aqua;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: width .5s ease-in-out;
+}
+
+.menu-link:hover::before {
+    width: 100%;
+}
+
+.social-media {
+    width: 100%;
+    display: flex;
+    bottom: 5rem;
+    position: absolute;
+    justify-content: center;
+}
+
+.social-media i {
+    width: 5rem;
+    height: 5rem;
+    background-color: #867d7d;
+    font-size: 2rem;
+    margin: 3rem;
+    color: antiquewhite;
+    justify-content: center;
+    border-radius: 50%;
+    align-items: center;
+    display: flex;
+    transition: background-color .5s;
+}
+
+.social-media i:hover {
+    background-color: #e9d163;
 }
