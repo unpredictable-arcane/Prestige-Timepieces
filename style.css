@@ -11,13 +11,13 @@ html{
     font-size: 62.5%;
 }
 
+
 .first-menu {
     width: 4rem;
     height: 4rem;
-    background-color: #aecdd5;
     position: fixed;
-    top: 7rem;
-    right: 7rem;
+    top: 4rem;
+    right: 4rem;
     z-index: 200;
     cursor: pointer;
     justify-content: space-between;
@@ -26,7 +26,7 @@ html{
     transition: right .8s;
 }
 
-.change .hamburger-menu {
+.change .first-menu {
     right: 33rem;
 }
 
@@ -37,20 +37,24 @@ html{
     box-shadow: 0 0.1rem 0.2rem #aecdd5;
 }
 
-.change.line {
-    background-color: #c15f5f;
+.line {
+    background-color: #292828;
 }
 
-.change.line-1 {
-    transform: rotate(45deg) translate(.3rem, .8rem);
+.change .line {
+    background-color: #b61e1e;
 }
 
-.change.line-2 {
+.change .line-1 {
+    transform: rotate(45deg) translate(.8rem, .8rem);
+}
+
+.change .line-2 {
     visibility: hidden;
     opacity: 0;
 }
 
-.change.line-3 {
+.change .line-3 {
     transform: rotate(-45deg) translate(.4rem, -.7rem);
 }
 
@@ -122,7 +126,7 @@ animation:scale 23s;
         transform: scale(1.5);
     }
     100% {
-        transform: scale(1.1);
+        transform: scale(1);
     }
 }
 
@@ -149,7 +153,7 @@ animation:scale 23s;
     line-height: 1.2rem;
     letter-spacing: .2rem;
     margin-bottom: 2rem;
-    text-shadow: #a85d5d;
+    text-shadow:0 .4rem .4rem #503f3f;
     opacity:0;
     animation: moveBanner 1s .5s  forwards;
 }
@@ -161,9 +165,9 @@ animation:scale 23s;
     width: 55%;
     letter-spacing: .1rem;
     margin-bottom: 3rem;
-    text-shadow: #645454;
+    text-shadow:0 .4rem .4rem #645454;
     opacity:0;
-    animation: moveBanner 1s .5s forwards;
+    animation: moveBanner 1s .7s forwards;
 }
 
 .banner button {
@@ -171,7 +175,7 @@ animation:scale 23s;
     height: 5rem;
     background-color: #3ca3cf;
     border: none;
-    font-family: "Muli", serif;
+    font-family: "Mulish", serif;
     font-size: 4rem;
     text-transform: uppercase;
     color: rgb(255, 255, 255);
@@ -179,7 +183,7 @@ animation:scale 23s;
     box-shadow:0 0.3rem 0.5rem #ff1818;
     cursor: pointer;
     opacity:0;
-    animation: moveBanner 1.5s 1.3s forwards;
+    animation: moveBanner 1s 1.1s forwards;
 }
 
 @keyframes moveBanner{
@@ -195,7 +199,7 @@ animation:scale 23s;
 .sidebar {
     background-color: #fff;
     height: 100vh;
-    width: 50rem;
+    width: 40rem;
     top: 0;
     right: -40rem;
     position: fixed;
@@ -219,7 +223,7 @@ animation:scale 23s;
 
 .menu-link {
     color: rgb(113, 109, 103);
-    font-size: 5rem;
+    font-size: 3.5rem;
     font-family: "Baloo Da 2", serif;
     position: relative;
 }
@@ -229,7 +233,8 @@ animation:scale 23s;
     top: 0;
     left: 0;
     position: absolute;
-    color: aqua;
+    color: rgb(200, 151, 90);
+    width: 0;
     white-space: nowrap;
     overflow: hidden;
     transition: width .5s ease-in-out;
@@ -250,19 +255,19 @@ animation:scale 23s;
 .social-media i {
     width: 5rem;
     height: 5rem;
-    background-color: #867d7d;
+    background-color: #c36464;
     font-size: 2rem;
     margin: 3rem;
-    color: antiquewhite;
+    color: rgb(255, 255, 255);
     justify-content: center;
     border-radius: 50%;
     align-items: center;
     display: flex;
-    transition: background-color .5s;
+    transition: background-color .4s;
 }
 
 .social-media i:hover {
-    background-color: #e9d163;
+    background-color: #0b0b0b;
 }
 
 .about-us {
@@ -384,6 +389,7 @@ animation:scale 23s;
 
 .card-wrapper {
  display: flex;
+ flex-direction: row;
  justify-content: center;
  align-items: center;
  margin-top: 10rem;
@@ -497,12 +503,12 @@ animation:scale 23s;
     }
 
     .banner p {
-        font-size: 4rem;
+        font-size: 3rem;
     }
 
     .banner button {
         width: 18rem;
-        height: 4rem;
+        height: 5rem;
         font-size: 1.5rem;
     }
 
@@ -550,5 +556,130 @@ animation:scale 23s;
         margin-bottom: 10rem;
     }
 
-    
+    .contact-wrapper {
+        width: 95%;
+        height: 50rem;
+    }
+
+    .contact-heading {
+        margin-bottom: 2rem;
+    }
+
+    .field {
+        margin: 2rem 0;
+    }
+}
+
+@media(max-width: 1000px) {
+    .banner h1 {
+        font-size: 4rem;
+        line-height: 5rem;
+    }
+
+    .banner p {
+       font-size: 2rem; 
+    }
+
+    .banner button {
+        width: 19rem;
+        height: 4rem;
+        font-size: 2rem;
+    }
+
+    .services {
+        align-items: center;
+        flex-direction: column;
+        display: flex;
+    }
+
+    .service {
+        width: 35rem;
+        margin-bottom: 5rem;
+    }
+
+    .about-us-img-wrapper {
+        width: 35rem;
+    }
+
+    .about-us-img-wrapper img {
+        width: 100%;
+    }
+
+    .contact-left {
+        width: 0;
+    }
+
+    .contact-right {
+        width: 100%;
+    }
+
+    .field {
+        width: 60rem;
+    }
+
+    .input-group textarea {
+        max-width: 60rem;
+    }
+
+    .submit-btn {
+        width: 50rem;
+    }
+
+    .footer-content {
+        width: 60%;
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .copyright {
+        order: 1;
+        margin-top: 4rem;
+    }
+}
+
+@media(max-width: 700px) {
+    .banner h1 {
+      font-size: 4rem;
+      line-height: 5rem;
+    }
+
+    .banner p {
+        font-size: 2rem;
+    }
+
+    .field {
+        width: 35rem;
+    }
+
+    .input-group textarea {
+        max-width: 30rem;
+    }
+
+    .submit-btn {
+        width: 30rem;
+    }
+}
+
+@media(max-width:500px) {
+    html {
+        font-size: 45%;
+    }
+
+    .sidebar {
+        right: -100%;
+        width: 100%;
+    }
+
+    .change .first-menu {
+        right: 40rem;
+    }
+
+    .service {
+        width: 35rem;
+    }
+
+    .footer {
+        height: 18rem;
+    }
 }
