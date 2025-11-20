@@ -606,41 +606,51 @@ html {
   box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.4);
 }
 
+/* Contact - section */
+
 .contact {
-  width: 100%;
-  height: 100vh;
-  background-color: #272727;
+  background: linear-gradient(120deg, #775a5a, #5b6c5a, #565576);
+  background-size: 300% 300%;
+  animation: gradientAnimation 12s ease infinite;
   display: flex;
   justify-content: center;
+  height: 120vh;
+  width: 100%;
   align-items: center;
 }
 
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
 .contact-wrapper {
-  width: 60%;
-  height: 75rem;
+  width: 70%;
+  height: 70rem;
   display: flex;
-  box-shadow: 0 3rem 7rem rgba(0, 0, 0, 0.5);
+  box-shadow: 0 3rem 7rem rgba(10, 8, 8, 0.5);
 }
 
 .contact-left {
-  width: 35%;
-  background: linear-gradient(rgba(15, 15, 15, 0.6), rgba(22, 22, 22, 0.9)),
+  width: 40%;
+  background: linear-gradient(rgba(105, 56, 56, 0.6), rgba(22, 22, 22, 0.9)),
     url(./images/p-1.avif) center no-repeat;
   background-size: cover;
 }
 
 .contact-right {
-  width: 65%;
+  width: 60%;
   background-color: #eee;
-  padding: 3rem 10rem 10rem 10rem;
+  padding: 5rem 10rem 10rem 10rem;
 }
 
 .contact-heading {
-  font-family: "Baloo Da 2", serif;
-  font-size: 6rem;
+  font-family: "Josefin+Slab", serif;
+  color: #151414;
+  font-size: 7rem;
   font-weight: 300;
-  color: #272727;
-  margin-bottom: 5rem;
+  margin-bottom: 8rem;
   text-align: center;
 }
 
@@ -657,14 +667,14 @@ html {
 
 .field {
   width: 45rem;
+  font-family: "Muli", serif;
   background-color: transparent;
   border: none;
   border-bottom: 0.2rem dashed #636363;
   margin: 3rem 0;
   padding: 1rem 1rem 1rem 0;
-  font-family: "Muli", serif;
-  font-size: 1.6rem;
-  color: #4b4b4b;
+  font-size: 2rem;
+  color: #544f4f;
 }
 
 .input-group input {
@@ -672,8 +682,8 @@ html {
 }
 
 .input-group textarea {
-  max-height: 7rem;
-  max-width: 45rem;
+  max-height: 8rem;
+  max-width: 50rem;
 }
 
 .field:focus {
@@ -681,9 +691,9 @@ html {
 }
 
 .input-group label {
+  font-family: "Baloo Da 2", serif;
   position: absolute;
   left: 0;
-  font-family: "Baloo Da 2", serif;
   font-size: 1.8rem;
   color: #4b4b4b;
   text-transform: uppercase;
@@ -695,77 +705,64 @@ html {
   bottom: 3rem;
 }
 
-.message {
-  bottom: 6rem;
-}
-
 .field:focus ~ label {
   transform: translateY(-3rem);
   font-size: 1.2rem;
 }
+.query {
+  bottom: 7rem;
+}
+
 
 .submit-btn {
-  width: 45rem;
+  background-color: oklch(78.9% 0.154 211.53);
+  font-family: "Muli", serif;
+  width: 36rem;
   height: 5rem;
-  background-color: #c29525;
   color: #fff;
   border: none;
   margin-top: 2rem;
-  font-family: "Muli", serif;
   font-size: 2rem;
-  font-weight: 300;
+  font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.3rem;
   cursor: pointer;
-  text-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.5);
-  box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.3);
+  text-shadow: 0 0.3rem 0.3rem rgba(119, 106, 106, 0.5);
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
 }
 
 .footer {
-  width: 100%;
+  background-color: #393b3f;
   height: 15rem;
-  background-color: #17181b;
+  width: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 .footer-content {
   width: 60%;
-  display: flex;
   justify-content: space-between;
+  display: flex;
 }
 
 .copyright {
   font-family: "Baloo Da 2", serif;
-  font-size: 1.6rem;
+  font-size: 2rem;
   color: #a7a7a7;
 }
 
 .social-list a {
-  margin: 0 2rem;
+  margin: 0 2.5rem;
 }
 
 .social-list i {
-  font-size: 2rem;
+  font-size: 3rem;
   color: #a7a7a7;
 }
 
-.scroll-btn {
-  position: fixed;
-  right: 5rem;
-  bottom: 5rem;
-  width: 4.5rem;
-  height: 4.5rem;
-  background-color: #e2b646;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2rem;
-  color: #fff;
-  box-shadow: 0 0.1rem 0.6rem rgba(0, 0, 0, 0.2);
-  border-radius: 0.3rem;
-}
+
+/* Responsive Design  */
 
 @media (max-width: 1500px) {
   .about-us-img-wrapper {
