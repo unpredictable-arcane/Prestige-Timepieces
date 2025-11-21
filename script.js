@@ -6,7 +6,7 @@ window.onload = () => {
 
 document.querySelector(".first-menu").addEventListener("click", () => {
   document.querySelector(".container").classList.toggle("change");
-}); 
+});
 
 document.querySelector(".scroll-btn").addEventListener("click", () => {
   document.querySelector("html").style.scrollBehavior = "smooth";
