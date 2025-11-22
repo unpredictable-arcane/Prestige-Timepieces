@@ -834,7 +834,15 @@ html {
 }
 
 @media (max-width: 1300px) {
-  .team {
+
+  .banner button {
+    font-size: 18px;
+  }
+
+  .abt-us-text {
+    font-size: 22px;
+  }
+  .best-one {
     padding-bottom: 5rem;
   }
 
@@ -878,6 +886,10 @@ html {
     font-size: 1.5rem;
   }
 
+  .menu-link {
+    font-size: 35px;
+  }
+
   .about-us {
     display: flex;
     flex-direction: column;
@@ -897,6 +909,10 @@ html {
     width: 100%;
   }
 
+  .contact-wrapper {
+    width: 70rem;
+  }
+
   .contact-left {
     width: 0;
   }
@@ -905,16 +921,18 @@ html {
     width: 100%;
   }
 
-  .field {
-    width: 55rem;
-  }
-
   .input-group textarea {
     max-width: 55rem;
   }
 
+  .field {
+    width: 55rem;
+  }
+
+
   .submit-btn {
     width: 55rem;
+    margin-top: 90px;
   }
 
   .footer-content {
@@ -940,8 +958,26 @@ html {
     font-size: 2rem;
   }
 
+  .menu-link {
+    font-size: 30px;
+  }
+
+  .sidebar {
+  width: 38rem;
+  height: 100vh;
+  }
+  .section-heading {
+    font-size: 50px;
+    font-weight: 400;
+  }
+
+  
   .field {
     width: 35rem;
+  }
+
+  .contact-heading {
+    font-size: 55px;
   }
 
   .input-group textarea {
@@ -951,6 +987,10 @@ html {
   .submit-btn {
     width: 35rem;
   }
+
+  .copyright {
+    font-size: 17px;
+  }
 }
 
 @media (max-width: 500px) {
@@ -959,8 +999,8 @@ html {
   }
 
   .sidebar {
-    width: 100%;
-    right: -100%;
+    width: 50%;
+    right: -50%;
   }
 
   .change .first-menu {
@@ -968,7 +1008,7 @@ html {
   }
 
   .abt-us {
-    width: 30rem;
+    width: 50rem;
   }
 
   .footer {
