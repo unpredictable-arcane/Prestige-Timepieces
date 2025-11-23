@@ -966,6 +966,7 @@ html {
   width: 38rem;
   height: 100vh;
   }
+  
   .section-heading {
     font-size: 50px;
     font-weight: 400;
@@ -994,6 +995,7 @@ html {
 }
 
 @media (max-width: 500px) {
+
   html {
     font-size: 45%;
   }
@@ -1012,6 +1014,6 @@ html {
   }
 
   .footer {
-    height: 18rem;
+    height: 16rem;
   }
 }
